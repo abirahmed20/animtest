@@ -1,0 +1,17 @@
+import turtle as op
+import colorsys
+op.bgcolor('black')
+op.tracer(900)
+h=0
+z=1
+op.pensize(20)
+for p in range(300):
+	c= colorsys.hsv_to_rgb(h,z,.8)
+	op.width(p//100+2)
+	op.right(120)
+	h += .006
+	op.color(c)
+	op.circle(p*.5,180)
+	op.circle(-p*.5-180)
+	op.circle(p*.5+60)
+op.done()
